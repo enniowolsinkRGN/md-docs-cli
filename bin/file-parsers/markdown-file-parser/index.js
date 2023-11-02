@@ -23,6 +23,7 @@ module.exports = class MarkdownFileParser {
         if (!(file.endsWith('.md') && !file.endsWith('.message.md') && !file.endsWith('.email.md')))
             return;
 
+        console.info('This is a test');
         console.info(colors.yellow(`parsing ${path.relative(this.options.dst, file)}`));
 
         const htmlFile = `${file.slice(0, -3)}.html`;
